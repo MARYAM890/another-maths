@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number = 5;
+document.write("Initial number: " + number + "<br>");
+number += 5; // Add 5
+document.write("After adding 5: " + number + "<br>");
+number *= 2; // Multiply by 2
+document.write("After multiplying by 2: " + number + "<br>");
+number /= 2; // Divide by 2
+document.write("After dividing by 2: " + number + "<br>");
+number -= 5; // Subtract 5
+document.write("After subtracting 5: " + number + "<br>");
+
+var a = 2, b = 1;
+var result = --a - --b + ++b + b--;
+// Output after each operation
+// --a;  (a becomes 1)
+// --a - --b;  (a becomes 0, b becomes 0, result is 1 - 0 = 1)
+// --a - --b + ++b;  (a becomes -1, b becomes 1, result is 0 - 1 + 1 = 0)
+// --a - --b + ++b + b--;  (a becomes -2, b becomes 0, result is -1 + 0 + 1 + 1 = 1)
+
+console.log("Value of a: " + a); // -2
+console.log("Value of b: " + b); // 0
+console.log("Result: " + result); // 1
+
+var name = prompt("Enter your name:");
+alert("Hello, " + name + "! Welcome to our website!");
+
+var number = parseInt(prompt("Enter a number for the multiplication table (default is 5):")) || 5;
+document.write("<h2>Multiplication Table of " + number + "</h2>");
+for (var i = 1; i <= 10; i++) {
+    document.write(number + " x " + i + " = " + (number * i) + "<br>");
+}
+
+var subject1 = prompt("Enter name of first subject:");
+var subject2 = prompt("Enter name of second subject:");
+var subject3 = prompt("Enter name of third subject:");
+
+// Total marks for each subject
+var totalMarks = 100;
+
+// Taking obtained marks for the first subject
+var marksSubject1 = parseFloat(prompt("Enter obtained marks for " + subject1 + ":"));
+
+// Displaying the results
+document.write("<h2>Result:</h2>");
+document.write("<p>Subject 1: " + subject1 + ", Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject1 + "</p>");
+// Similarly, you can take input for marks of subject2 and subject3 and display them
+// Taking obtained marks for the remaining 2 subjects
+var marksSubject2 = parseFloat(prompt("Enter obtained marks for " + subject2 + ":"));
+var marksSubject3 = parseFloat(prompt("Enter obtained marks for " + subject3 + ":"));// Calculate total marks and percentage
+var totalObtainedMarks = marksSubject1 + marksSubject2 + marksSubject3;
+var totalPercentage = (totalObtainedMarks / (totalMarks * 3)) * 100;
+
+// Displaying the results
+document.write("<h2>Result:</h2>");
+document.write("<p>Subject 1: " + subject1 + ", Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject1 + "</p>");
+document.write("<p>Subject 2: " + subject2 + ", Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject2 + "</p>");
+document.write("<p>Subject 3: " + subject3 + ", Total Marks: " + totalMarks + ", Obtained Marks: " + marksSubject3 + "</p>");
+document.write("<p>Total Obtained Marks: " + totalObtainedMarks + "</p>");
+document.write("<p>Percentage: " + totalPercentage + "%</p>");
+    </script>
+</body>
+</html>
